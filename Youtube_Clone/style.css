@@ -7,6 +7,12 @@
   align-items: center;
   justify-content: space-between;
 
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  margin-bottom: 60px;
 
 }
 
@@ -15,6 +21,7 @@
   align-items: center;
   width: 170px;
   padding-left: 7px;
+
 }
 
 .menu-bar-icon {
@@ -31,11 +38,13 @@
 
 .middle-section {
   flex: 1;
-  margin-left: 160px;
+  margin-left: 190px;
   margin-right: 100px;
-  max-width: 732px;
+  width: auto;
+  max-width: 660px;
   display: flex;
   align-items: center;
+
 
 }
 
@@ -48,6 +57,13 @@
   border: 1px solid gray;
   border-radius: 40px 0 0 40px;
   box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+
+
+  width: 100%;
+  max-width: 100%;
+  transition: width 0.3s ease;
+
+  /* adjust as needed */
 }
 
 .search-bar::placeholder {
@@ -57,7 +73,7 @@
 
 .search-button {
   height: 42px;
-  width: 60px;
+  width: 58px;
   border: 1px solid gray;
   margin-left: -1;
   border-top-right-radius: 20px;
@@ -80,25 +96,23 @@
 }
 
 .right-section {
-  width: 250px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding-right: 36px;
+  flex: 0 1 auto;
 }
 
 .create-button {
   display: flex;
   align-items: center;
-  gap: 1px;
-  /* Space between + and text */
-  padding: 8px 16px;
-  background-color: #212121;
-  /* Button background */
+  padding: 5px 11px;
+  background-color: rgb(52, 50, 50);
   border: none;
   border-radius: 20px;
-  /* Rounded edges */
   cursor: pointer;
   color: white;
-  /* Text color */
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -106,21 +120,25 @@
 
 .plus-symbol {
   font-family: 'Material Symbols Outlined';
-  font-size: 24px;
-  /* Matched size */
+  font-size: 25px;
   font-weight: normal;
-  /* Ensure matching thickness */
   line-height: 1;
-  /* Correct alignment */
-  padding-right: 5px;
+  padding-right: 4px;
 }
 
 .create-button:hover {
-  background-color: #333;
+  background-color: #413f3f;
 }
 
-.notification-button {}
-
 .notification-icon {
-  height: 24px
+  height: 28px;
+  width: 25px;
+  margin-left: 10px;
+}
+
+.profile-icon {
+  height: 37px;
+  width: 37px;
+  border-radius: 50%;
+  margin-left: 15px;
 }
