@@ -2,11 +2,9 @@
 
 .header {
   height: 55px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: fixed;
   top: 0;
   right: 0;
@@ -21,6 +19,8 @@
   align-items: center;
   width: 170px;
   padding-left: 7px;
+
+  margin-right: 10px;
 
 }
 
@@ -38,13 +38,12 @@
 
 .middle-section {
   flex: 1;
-  margin-left: 190px;
-  margin-right: 100px;
   width: auto;
   max-width: 660px;
   display: flex;
   align-items: center;
-
+  justify-content: flex-end;
+  flex: 1 1 1;
 
 }
 
@@ -55,35 +54,34 @@
   font-size: 16px;
   font-weight: medium;
   border: 1px solid gray;
-  border-radius: 40px 0 0 40px;
   box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
-
-
   width: 100%;
   max-width: 100%;
   transition: width 0.3s ease;
+  border-radius: 20px 0 0 20px;
 
-  /* adjust as needed */
 }
 
 .search-bar::placeholder {
   font-family: "Roboto", "Arial" sans-serif;
   font-size: 16px;
+  min-width: 0;
 }
 
 .search-button {
   height: 42px;
-  width: 58px;
+  width: 60px;
   border: 1px solid gray;
   margin-left: -1;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-right: 15px;
+  margin-right: 12px;
 }
 
 .search-icon {
   height: 28px;
   padding-top: 4px;
+  border-radius: 50%;
 }
 
 
@@ -92,15 +90,15 @@
   width: 40px;
   border-radius: 50%;
   border: none;
+  margin-right: 10px;
 
 }
 
 .right-section {
-
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 36px;
+  padding-right: 20px;
   flex: 0 1 auto;
 }
 
@@ -137,8 +135,52 @@
 }
 
 .profile-icon {
-  height: 37px;
-  width: 37px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   margin-left: 15px;
+}
+
+@media (max-width: 660px) {
+
+  .middle-section {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu-bar-icon {
+    margin-left: 10px;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .search-button {
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    margin-right: -10px;
+    width: 50px;
+  }
+
+  .search-button:active,
+  .search-button:focus,
+  .search-button:hover {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  .create-button {
+    border: none !important;
+  }
+
+
+  .search-icon {
+    width: 30px;
+    background-color: white;
+  }
+
+
 }
